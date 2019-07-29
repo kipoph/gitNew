@@ -4,20 +4,22 @@ var h1= document.getElementById("our-headline");
 var listLength=listItems.length;
 var button=document.getElementById("ourButton");
 var newItemCounter=1;
-document.write(listItems[1].innerText)
-for(i=0;i<listLength;i++)
-{
-    listItems[i].addEventListener("click", activateItem);
-}
-function activateItem() {
-    for(i=0;i<listLength;i++)
-    {
-        listItems[i].classList.remove("active");
-    }
-    h1.innerHTML=this.innerHTML;
-    this.classList.add("active");
-}
 
+
+list.addEventListener("click", activateItem)
+function activateItem(e){
+    if("LI"==e.target.nodeName){
+        var ListLength = document.getElementById("list").getElementsByTagName("li").length;
+         
+        for(i=0;i<ListLength;i++){
+            e.target.parentNode.children[i].classList.remove("active");
+        }
+        e.target.classList.add("active");
+        h1.innerHTML=e.target.innerText;
+    }
+    
+}
+document.write('hello there!')
 button.addEventListener("click", createNewItem);
 
 function createNewItem() {
