@@ -7,6 +7,9 @@
     <title>Document</title>
 </head>
 <style>
+#list {
+    color :red;
+}
 .button{
     width: 120px;
     height: 40px;
@@ -18,23 +21,20 @@
 .button:hover{
     background-color: rgb(39, 128, 113);
 }
-
+.active{
+    background-color:beige;
+}
 </style>
 <body>
     <h1 id="our-headline">Click a list item to replace this text</h1>
     
-    <button class="button" type="submit">Add new item</button>
+    <button id="ourButton" class="button" type="submit">Add new item</button>
     <ul id="list">
-        <li>First item</li>
-        <hr>
-        <li>Second item</li>
-        <hr>
-        <li>Third item</li>
-        <hr>
-        <li>Fourth item</li>
-        <hr>
-        <li>Fifth item</li>
-        <hr>
+        <li>First item<hr></li>
+        <li>Second item<hr></li>
+        <li>Third item<hr></li>
+        <li>Fourth item<hr></li>
+        <li>Fifth item<hr></li>
     </ul>
     <script src="js/main.js"></script>
 </body>
